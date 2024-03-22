@@ -30,10 +30,10 @@
 
         </header>
         <div class='flex-grow align-self-center' style='flex-grow:1;'>
-            <div class='banner d-flex flex-column flex-md-row align-items-center p-3 pe-md-0'>
+            <div class='banner d-flex flex-column flex-md-row align-items-center'>
                 <section class="banner__text-section" id="#form1">
                     <h1>
-                        PET CT SCAN Cost for cancer diagnostic starts at <span style="border-radius:3px; background-color: var(--clr1); height: auto;">Rs.10999/-</span>
+                        PET CT SCAN Cost for cancer diagnostic starts <br><span>at <span style="border-radius:3px; background-color: var(--clr1); height: auto;">Rs.10999/-</span></span>
                     </h1>
                     <div class="d-flex section-div d-flex flex-row align-items-center py-1 banner-first-div">
                         <img src="./assets/imgs1.webp" alt="" width="60" height="60" class="">
@@ -45,7 +45,7 @@
                         </p>
                     </div>
                 </section>
-                <div class="bg-light p-3 p-md-auto banner__form-section align-self-stretch">
+                <div style="z-index: 1;" class="bg-light p-3 p-md-auto banner__form-section align-self-stretch">
                     <form action="redirect.php" method="POST" style="" class="form laptop-form bg-light rounded border-0 d-flex flex-column align-items-center bg-light ms-3">
                         <h1 class="text-center text-dark mb-0 pb-0" style="color: #a65fa2; font-family: var(--font-sans);">
                             Book Your Pet Scan Now !
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <?php include './components/typesOFScan.php' ?>
-            <div class="d-flex flex-md-row justify-content-center justify-content-md-start align-items-center p-3 text-white mb-2" style="background-image: linear-gradient(to right, #802a8f, #d37fa0);">
+            <div class="d-flex flex-md-row justify-content-center justify-content-md-start align-items-center p-3 text-white" style="background-image: linear-gradient(to right, #802a8f, #d37fa0);">
                 <img class="doctor-image" src="./assets/img5.webp" alt="">
                 <div class="ms-3 d-md-flex ms-md-3 flex-md-grow-1 justify-content-md-between align-items-md-center  ">
                     <p class="text-md-start para">
@@ -119,8 +119,6 @@
                     <div id="carouselExampleCaptions" class="carousel slide d-md-none pc-accordian-size">
                         <div class="carousel-indicators">
                             <?php
-                            $reviews_query = "SELECT * FROM reviews ;";
-                            $review_result = $conn->query($reviews_query);
                             $num_reviews = $review_result->num_rows;
                             for ($i = 0; $i < $num_reviews; $i++) {
                                 $active_class = ($i == 0) ? 'active' : '';
@@ -326,13 +324,10 @@
                 </h2>
                 <div class="d-flex flex-row flex-wrap justify-content-center p-3">
                     <?php
-                    $faq_sql_query = 'SELECT * FROM faqs; ';
-                    $services_sql_query = 'SELECT * FROM services; ';
-                    $faq_result = $conn->query($faq_sql_query);
-                    $services_result = $conn->query($services_sql_query);
+
                     foreach ($services_result as $services) {
                         echo "
-                            <div class='our-services-card guidance-card d-flex flex-column align-items-center p-3 text-center'>
+                            <div class='our-services-card guidance-card d-flex flex-column align-items-center text-center'>
                                 <img src='{$services['image']}' height='80' alt=''>
                                 <span class='mt-2 change-to-span'>{$services['name']}</span>
                             </div>

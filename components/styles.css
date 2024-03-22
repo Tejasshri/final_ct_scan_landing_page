@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 @font-face {
   font-family: "Source Sans 3", sans-serif;
   src: url("./Source_Sans_3/static/SourceSans3-Medium.ttf") format("truetype");
@@ -8,7 +10,7 @@
 }
 
 html {
-  font-family: "source sans pro","Source Sans 3", sans-serif;
+  font-family: "source sans pro", "Source Sans 3", sans-serif;
   font-size: 2.76vw;
   @media screen and (max-width: 768px) {
     font-size: 4.4vw;
@@ -18,7 +20,7 @@ html {
 :root {
   --icon-size: 1.5rem;
   height: 40px;
-  --font-sans: "Source Sans 3", sans-serif;
+  --font-sans: "Source Sans 3", sans-serif !important;
   --clr1: #802a8f;
   --clr2: #f0d0dd;
   --fss-1: 1rem; /* 22px */
@@ -54,7 +56,7 @@ nav img {
 .banner {
   position: relative;
   background-position: center;
-  padding: 20px 0;
+  padding: 1.3018rem !important;
   background: url("../assets/img6.webp");
   background-size: cover;
   color: white;
@@ -65,7 +67,8 @@ nav img {
 
 .banner__text-section {
   @media screen and (max-width: 768px) {
-    margin: 30px 10px;
+    margin: 1.3636rem 1rem !important;
+    align-self: flex-start !important;
   }
 }
 
@@ -74,11 +77,16 @@ nav img {
   font-size: 1.6rem;
   font-weight: 600;
   text-align: left;
-  line-height: 2.2rem;
+  line-height: 1.7547rem !important;
   width: 18.15094rem;
   @media screen and (max-width: 768px) {
-    width: 15.954545rem;
+    width: 16.27273rem;
+    line-height: 2rem !important;
   }
+}
+
+.banner__text-section h1 > span {
+  line-height: 2.4rem !important;
 }
 
 .section-div {
@@ -150,7 +158,7 @@ select {
   all: unset;
   display: flex;
   align-items: center;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .features__card img {
@@ -167,7 +175,8 @@ select {
   @media screen and (max-width: 768px) {
     font-weight: 400;
     font-size: 1rem;
-    width: 5.63rem;
+    width: 6.4545rem;
+    margin-bottom: 0.5454rem;
   }
 }
 
@@ -186,16 +195,14 @@ select {
 .ct-scan-cards h2 {
   font-size: var(--fss-33) !important;
   width: 6rem;
-  height: 1.54716981rem;
   text-transform: capitalize;
   color: rgb(30, 29, 29);
-  margin-top: 1.07692308rem !important;
-  margin-bottom: 0.339622642rem !important;
+  margin: unset !important;
+  margin-top: auto;
+  margin-top: auto !important;
   @media screen and (max-width: 768px) {
     font-size: var(--fss-16) !important;
     width: 7.3636rem;
-    height: 2.818181rem;
-    margin-bottom: 0 !important;
   }
 }
 
@@ -203,7 +210,7 @@ select {
   color: grey;
   font-size: 23px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ct-scan-cards div p:last-child {
@@ -267,7 +274,7 @@ button {
 .guidance-card {
   width: 10.377rem;
   height: 8.207rem;
-  margin: 0.2rem !important;
+  margin: 0.179rem !important;
   background-color: white;
   border-radius: 6px;
   align-items: center;
@@ -275,6 +282,7 @@ button {
     width: 18.5rem;
     height: 14.7rem;
     justify-content: center;
+    margin: 0.3088rem !important;
   }
 }
 
@@ -335,18 +343,23 @@ button {
 }
 
 .our-services-card {
-  /* margin: unset; */
+  box-shadow: 0 4px 16px 0 #bfbfbf;
   margin: 0.34rem !important;
+  padding: 1rem;
   width: 7.603rem !important;
   height: 7.358rem;
   @media screen and (max-width: 768px) {
     width: 9.95rem !important;
     height: 9.63rem;
+    padding: 1.2727rem;
   }
 }
 
 .our-services-card p {
-  line-height: 1;
+  padding: 0.849rem;
+  @media screen and (max-width: 768px) {
+    padding: 1.01rem;
+  }
 }
 
 .myBtn {
@@ -421,10 +434,6 @@ strong {
   padding: 0;
 }
 
-.faq-inner-container .accordion-button {
-  font-family: Source Sans Pro !important;
-}
-
 .mobile-form {
   width: 79.4vw !important;
   padding: 1vw;
@@ -438,15 +447,10 @@ strong {
   align-self: stretch;
   z-index: 10;
   @media screen and (max-width: 768px) {
-    /* width: 17.8636rem !important; */
     height: 21.3636rem !important;
     width: 100% !important;
     margin-left: 0 !important;
   }
-}
-
-.laptop-form p {
-  font-family: "Source Sans Pro", var(--font-sans);
 }
 
 .mobile-form {
@@ -458,13 +462,10 @@ strong {
   position: relative;
   width: 25.88vw !important;
   height: calc(355rem / 53);
-  margin: 1vw 10px !important;
+  margin: 0.34 !important;
   @media screen and (max-width: 768px) {
     width: 45.8vw !important;
     height: calc(170.18rem / 22);
-    margin-left: unset;
-    margin-right: unset;
-    margin: 1vw 4px !important;
   }
 }
 
@@ -474,10 +475,6 @@ strong {
   @media (max-width: 768px) {
     font-size: var(--fss-16) !important;
   }
-}
-
-:root {
-  --accordian-btn-clr: ;
 }
 
 .accordion-button {
@@ -490,7 +487,6 @@ strong {
 
 .show {
   color: #323232;
-  font-size: ;
   @media screen and (max-width: 768px) {
     font-size: 1.0909rem !important;
   }
@@ -531,7 +527,6 @@ nav button {
 .accordion-header,
 .accordion-item {
   background-color: var(--clr2) !important;
-  /* color: unset !important; */
 }
 
 .accordion-button:not(.collapsed) {
@@ -539,8 +534,7 @@ nav button {
 }
 
 .hr-line {
-  color: grey;
-  border: 1px solid;
+  border: 1px solid gray;
   align-self: stretch;
 }
 
@@ -640,12 +634,6 @@ code {
   }
 }
 
-.faq-inner-container,
-.faq-inner-container .accordion-body,
-.accordion-body {
-  font-family: var(--font-sans) !important;
-}
-
 .ct-scan-cards__btn {
   all: unset;
   font-size: 0.6226rem;
@@ -653,7 +641,9 @@ code {
   height: 0.943346rem;
   border-radius: 0.098113208rem;
   font-weight: 500;
-  margin: 10px;
+  @media screen and (min-width: 768px) {
+    margin: 0.76rem !important;
+  }
   @media screen and (max-width: 768px) {
     font-size: 0.727rem;
     width: 4.54545rem;
@@ -675,12 +665,6 @@ code {
   @media screen and (max-width: 768px) {
     margin-top: 0.9545rem !important;
   }
-}
-
-.guidance-card {
-  /* margin-left: 0.0566rem !important;
-  margin-right: calc(3rem / 53) !important; */
-  margin: 0.34rem !important;
 }
 
 .understanding-ct-scan-card-container > div::-webkit-scrollbar {
@@ -828,9 +812,23 @@ code {
   background-position: center;
   background-size: 20px;
 }
-
 .understanding-ct-scan-container .accordion-button {
   color: black !important;
+  @media screen and (min-width: 768px) {
+    padding: 1rem !important;
+  }
+}
+.understanding-ct-scan-container .accordion-button:not(.collapsed) {
+  color: black !important;
+  @media screen and (min-width: 768px) {
+    padding: 1rem !important;
+    padding-bottom: 0.6rem !important;
+  }
+}
+.understanding-ct-scan-container .accordion-body {
+  @media screen and (min-width: 768px) {
+    padding-left: 1rem !important;
+  }
 }
 
 .our-services-card {
@@ -841,10 +839,6 @@ code {
     width: 9.95rem !important;
     height: 9.63rem;
   }
-}
-
-.ct-scan-cards {
-  margin: 0.24rem !important;
 }
 
 .carousel-indicators {
@@ -885,6 +879,23 @@ code {
   width: 100vw;
 }
 
+.reviews-section {
+  padding-top: 1.96226rem;
+  padding-bottom: 1.96226rem;
+  @media screen and (max-width: 768px) {
+    padding-top: 0.7272rem;
+    padding-bottom: 0.7272rem;
+  }
+}
+
+.reviews-section h1 {
+  margin: 0 !important;
+  margin-bottom: 0.811rem !important;
+  @media screen and (max-width: 768px) {
+    margin-bottom: var(--fss-16) !important;
+  }
+}
+
 .review-card h3 {
   font-weight: 600;
   font-size: var(--fss-33);
@@ -894,6 +905,7 @@ code {
 }
 
 .review-card hr {
+  margin: unset !important;
   margin-top: auto !important;
   align-self: stretch;
   width: 100%;
@@ -909,4 +921,43 @@ footer {
 
 .review-person {
   text-align: left;
+}
+
+.scan-types-container {
+  padding-top: 1.1132rem !important;
+  padding-bottom: 1.1132rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  @media screen and (max-width: 768px) {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+.ct-scan-cards {
+  margin: 0.136rem;
+  @media screen and (max-width: 768px) {
+    margin: 0.136rem !important;
+  }
+}
+
+button {
+  border-radius: 0.0998rem !important;
+  @media screen and (max-width: 768px) {
+    border-radius: 0.1154rem !important;
+  }
+}
+
+.faq-inner-container .accordion-button {
+  height: 2.2641rem !important;
+  padding-left: 0 !important;
+}
+@media screen and (max-width: 768px) {
+  .faq-inner-container {
+    padding-left: 1.6818rem;
+    padding-right: 1.6818rem;
+  }
+}
+.faq-inner-container .accordion-body {
+  padding-left: 0 !important;
 }

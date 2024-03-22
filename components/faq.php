@@ -13,7 +13,7 @@ function getFaqs($data)
             $faq_title = $row['question'];
             $faq_description = $row['answer'];
             $classNameItem1 = 'accordion-item d-md-none';
-            $classNameBtn1 = 'accordion-button collapsed';
+            $classNameBtn1 = 'accordion-button';
             $classNameBody1 = 'accordion-collapse collapse show';
             if (ceil($numOfRows / 2) >= $faq_id) {
                 $classNameItem1 = 'accordion-item';
@@ -51,7 +51,7 @@ function getFaqs($data)
             $faq_title = $row['question'];
             $faq_description = $row['answer'];
             $classNameItem2 = 'accordion-item';
-            $classNameBtn2 = 'accordion-button collapsed';
+            $classNameBtn2 = 'accordion-button';
             $classNameBody2 = 'accordion-collapse collapse show';
             if (ceil($numOfRows / 2) >= $faq_id) {
                 $classNameItem2 = 'accordion-item d-none';
