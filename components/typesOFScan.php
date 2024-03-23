@@ -13,7 +13,7 @@
                             <p>RS {$typesCardData['discount_price']}/-</p>
                         </div>
                         <hr class='hr-line' />
-                        <button style='background-color: #802A8F; margin-right: 4px;' class='my-2 border-0 text-white ct-scan-cards__btn' onclick='onClickScan(event)' data-text='{$typesCardData['text']}'>
+                        <button style='background-color: #802A8F; margin-right: 4px;' class=' border-0 text-white ct-scan-cards__btn' onclick='onClickScan(event)' data-text='{$typesCardData['text']}'>
                             Book Now
                         </button>
                     </div> ";

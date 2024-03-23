@@ -19,9 +19,9 @@
     <?php include './components/faq.php' ?>
     <div class='d-flex flex-column min-vh-100' id="container">
         <header class="position-sticky top-0 bg-light border-danger" style="z-index: 2;">
-            <nav class='d-flex justify-content-between align-items-center p-3 px-md-5 custom-nav'>
+            <nav class='d-flex justify-content-between align-items-center custom-nav'>
                 <a class="">
-                    <img class="h-100" src="https://www.cioncancerclinics.com/biopsy-test-hyderabad/assets/img/v2/cion-cancer-clinics-logo.svg" alt="">
+                    <img class="" src="https://www.cioncancerclinics.com/biopsy-test-hyderabad/assets/img/v2/cion-cancer-clinics-logo.svg" alt="">
                 </a>
                 <button style="background-color: #dc3545; background: var(--clr1); font-weight: 500; border-radius: calc(6rem/53) !important;" class="border-0 rounded text-light myBtn">
                     <a href="tel:18001202676" style="text-decoration: none; color: white;">Contact Us</a>
@@ -35,13 +35,13 @@
                     <h1>
                         PET CT SCAN Cost for cancer diagnostic starts <br><span>at <span style="border-radius:3px; background-color: var(--clr1); height: auto;">Rs.10999/-</span></span>
                     </h1>
-                    <div class="d-flex section-div d-flex flex-row align-items-center py-1 banner-first-div">
-                        <img src="./assets/imgs1.webp" alt="" width="60" height="60" class="">
+                    <div class="d-flex section-div d-flex flex-row align-items-center banner-first-div">
+                        <img src="./assets/imgs1.webp" alt="" class="banner__image">
                         <p class="ms-2 fs-4 fw-normal text-light">One Free Oncology Consultation</p>
                     </div>
-                    <div class="d-flex section-div py-1 banner__text-section__div">
-                        <img src="./assets/imgs2.webp" alt="" width="60" height="60" class="">
-                        <p class="ms-2 fs-4 fw-normal text-light">CION Assured Oncologist Diagnostics
+                    <div class="d-flex section-div d-flex flex-row align-items-center banner__last-text-div">
+                        <img src="./assets/imgs2.webp" alt="" class="banner__image">
+                        <p class="text-light">CION Assured Oncologist Diagnostics
                         </p>
                     </div>
                 </section>
@@ -52,7 +52,7 @@
                         </h1>
                         <input placeholder="Name" pattern="[a-zA-Z0-9 ]+" name='name' type="text" class="border-0 px-2 bg-white rounded bg-gray-200">
                         <input placeholder="Phone Number" pattern='[0-9]+' name='number' type="number" pattern="" class="border-0 px-2 bg-white rounded bg-gray-200">
-                        <select name='type' class="border-0 px-2 bg-white rounded bg-gray-200" id="scanElement" value=''>
+                        <select name='type' class="border-0 px-2 bg-white rounded bg-gray-200 custom-select" id="scanElement" value=''>
                             <option value="Select type of scan">Select type of scan</option>
                             <?php
                             $scansType = array(
@@ -86,7 +86,7 @@
                 </div>
                 <div class='features__card'>
                     <img src="./assets/img2.webp" alt="">
-                    <span class="align-self-center">Same Day Report</span>
+                    <span class="align-self-center">Same Day <br>Report</span>
                 </div>
                 <div class='features__card'>
                     <img src="./assets/img3.webp" alt="">
@@ -103,7 +103,7 @@
                 <div class="ms-3 d-md-flex ms-md-3 flex-md-grow-1 justify-content-md-between align-items-md-center  ">
                     <p class="text-md-start para">
                         Don’t have a prescription?
-                        Consult Our Oncologist <span>FREE</span> now!  
+                        Consult Our Oncologist <span style="font-weight: 800;">FREE</span> now!  
                     </p>
                     <button class="btn myBtn book-btn btn-outline-primary bg-light" style="color: var(--clr1);">
                         Book Appointment
@@ -134,7 +134,7 @@
                                     <div class='{$carouselClass}'>
                                         <div class='review-card p-2'>
                                             <p>{$reviewData['review']}</p>
-                                            <hr class='review-hr-line' />
+                                            <hr />
                                             <div class='p-2 d-flex justify-content-between'>
                                                 <h3>{$reviewData['person']}<br>{$reviewData['location']}</h3>
                                                 <div>
@@ -187,9 +187,9 @@
                                 echo "
                 <div class='{$carouselClass}'>
                     <div class='d-flex justify-content-center'>
-                        <div class='review-card d-none d-md-flex flex-column me-1'>
-                            <p><strong style='font-weight: 400;'>{$item1['review']}</strong></p>
-                            <hr />
+                        <div class='review-card d-none d-md-flex flex-column'>
+                            <p>{$item1['review']}</p>
+                            <hr class='review-hr-line' />
                             <div class='p-2 d-flex justify-content-between'>
                                 <h3 class='review-person'>{$item1['person']}<br>{$item1['location']}</h3>
                                 <div class='rating-container'>
@@ -201,9 +201,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='review-card d-none d-md-flex flex-column ms-1'>
-                            <p><strong style='font-weight: 400;'>{$item2['review']}</strong></p>
-                            <hr />
+                        
+                        <div class='review-card d-none d-md-flex flex-column'>
+                            <p>{$item2['review']}</p>
+                            <hr  />
                             <div class='p-2 d-flex justify-content-between align-items-center'>
                                 <h3 class='review-person'>{$item2['person']}<br>{$item2['location']}</h3>
                                 <div class='rating-container'>
@@ -254,22 +255,22 @@
             </div>
             <div class="d-flex flex-wrap location-container py-3">
                 <div class="location-card d-flex justify-content-center align-items-center p-2 mt-3 mt-md-0 ">
-                    <img src="./assets/locationicon.webp" alt="">
+                    <img src="./assets/locationnewicon.webp" alt="">
                     Chinnagadili
                 </div>
                 <div class="location-card d-flex justify-content-center align-items-center p-2 mt-3 mt-md-0 ">
-                    <img src="./assets/locationicon.webp" alt="">
+                    <img src="./assets/locationnewicon.webp" alt="">
                     MVP Colony
                 </div>
                 <div class="location-card d-flex justify-content-center align-items-center p-2 mt-3 mt-md-0 ">
-                    <img src="./assets/locationicon.webp" alt="">
+                    <img src="./assets/locationnewicon.webp" alt="">
                     Jagadamba Centre
                 </div>
             </div>
 
-            <div class="understanding-ct-scan-container p-3 p-md-5">
-                <h2 class="text-center fw-bold my-3 title">
-                    Understanding PET-CT Scans: Importance, Need, and Cost in India
+            <div class="understanding-ct-scan-container ">
+                <h2 class="text-center fw-bold title">
+                    Understanding PET-CT Scans: Importance, Need, and Cost in <br class="d-md-none" />India
                 </h2>
                 <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start  understanding-ct-scan-card-container">
                     <button type="button" class="btn btn-danger waves-effect waves-light" style="all: unset !important;" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -351,12 +352,10 @@
         </footer>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-md modal-lg modal-dialog-centered">
             <div class="modal-content border-0 shadow p-1 rounded-0 ">
                 <div class="modal-body p-1">
                     <iframe class='video' src="https://www.youtube.com/embed/lE6bzCEjyU0?si=4QtmKRYdx-LiWBeL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="modal-footer p-0 m-0">
                     <button type="button" class="btn-danger video-btn" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
